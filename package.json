@@ -2,7 +2,7 @@
   "name": "@clouly_y/linqer",
   "author": "Clouly-Y <943592084@qq.com>",
   "license": "ISC",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "C# IEnumerable in TypeScript,true lazy evaluation",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
