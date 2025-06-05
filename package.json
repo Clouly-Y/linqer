@@ -1,0 +1,50 @@
+{
+  "name": "@clouly_y/linqer",
+  "author": "Clouly-Y <943592084@qq.com>",
+  "license": "ISC",
+  "version": "0.0.1",
+  "description": "C# IEnumerable in TypeScript,true lazy evaluation",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm run clean_before && rollup -c && (npm run mergedts || npm run true) && npm run clean_after",
+    "true": "",
+    "mergedts": "api-extractor run",
+    "clean_before": "rimraf dist lib",
+    "clean_after": "rimraf dist/dts dist/tsdoc-metadata.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Clouly-Y/linqer"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.52.8",
+    "@rollup/plugin-alias": "latest",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "latest",
+    "@rollup/plugin-terser": "latest",
+    "@rollup/plugin-typescript": "latest",
+    "@types/node": "^22.15.23",
+    "rimraf": "latest",
+    "rollup": "latest",
+    "rollup-plugin-terser": "latest",
+    "tslib": "latest",
+    "typescript": "latest"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@clouly_y/types": "^1.0.0"
+  }
+}
